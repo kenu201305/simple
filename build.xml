@@ -11,15 +11,18 @@
 	<description>
             simple web
     </description>
+	<property name="build.home" value="target"/>
+	<property name="class.path" value="${build.home}/WEB-INF/classes"/>
+
 
 	<!-- ================================= 
           target: compile              
          ================================= -->
 	<target name="compile" depends="init" description="simple web">
-		<mkdir dir="target/WEB-INF/classes" />
-		<javac srcdir="src" destdir="target/WEB-INF/classes">
+		<mkdir dir="${class.path}" />
+		<javac srcdir="src" destdir="${class.path}">
 		</javac>
-		<copy todir="target">
+		<copy todir="${build.home}">
 			<fileset dir="WebContent" id="id">
 				<include name="**/*" />
 				<exclude name="exclude" />
