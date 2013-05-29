@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     2013. 5. 29. 오후 8:02:47                                                        
+
+     simple    
+     simple web
+                   
+     Administrator                                                                
+     ====================================================================== -->
+<project name="simple" default="compile">
+	<description>
+            simple web
+    </description>
+
+	<!-- ================================= 
+          target: compile              
+         ================================= -->
+	<target name="compile" depends="init" description="simple web">
+		<mkdir dir="target/WEB-INF/classes" />
+		<javac srcdir="src" destdir="target/WEB-INF/classes">
+		</javac>
+		<copy todir="target">
+			<fileset dir="WebContent" id="id">
+				<include name="**/*" />
+				<exclude name="exclude" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: init                      
+         - - - - - - - - - - - - - - - - - -->
+	<target name="init">
+
+	</target>
+
+</project>
