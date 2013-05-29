@@ -11,7 +11,7 @@
 	<description>
             simple web
     </description>
-	<property name="build.home" value="target"/>
+	<property name="build.home" value="/home/okdev/local/apache-tomcat-7.0.40/webapps/ROOT"/>
 	<property name="class.path" value="${build.home}/WEB-INF/classes"/>
 
 
